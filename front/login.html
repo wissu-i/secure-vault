@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script defer src="./js/login.js"></script>
+    <style>
+      *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body, html{
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #dff6ff, #f0f8ff);
+      }
+
+      .center{
+        display: flex;
+        width: 100%;
+        height: 100%;
+        padding: 1%;
+      }
+     
+      .right{
+        flex: 1;
+        background-color: black;
+      }
+
+      .left{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      
+      }
+
+      p, b, label{
+        font-size: 1.5rem;
+      }
+
+      b{
+        color: #e63946;
+      }
+
+      h1{
+        font-size: 3rem;
+        color: #45b9d0;
+      }
+
+      .signup-form{
+        display: flex;
+        flex-direction: column;
+        margin: 1rem 0 0.2rem 0;
+        height: 60%;
+        width: 70%;
+      }
+
+      .input-control{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+      }
+
+      .inputs{
+        border-radius: 10px;
+        height: 3.5rem;
+        width: auto;
+        padding-left: 15px;
+      }
+
+      .inputs::placeholder{
+        font-size: 1rem;
+
+      }
+
+      .inputs:focus {
+        border: 1px solid #45b9d0;
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(69, 185, 208, 0.3); /* smooth, centered glow */
+      }
+      
+      #email-label{
+        margin-top: 2rem;
+      }
+
+      #password{
+        margin-top: 1rem;
+      }
+
+      input[type=submit]{
+        background-color: #45b9d0;
+        color: white;
+        height:3rem;
+        border: none;
+        border-radius: 20px;
+        font-size: medium;
+        margin-bottom: 1rem;
+    
+      }
+
+      .forgot-password{
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      a{
+        margin-bottom: 1rem;
+        text-decoration: none;
+        color: #e63946;
+        font-size: 1.2rem;
+        margin-top: 5px;
+      }
+
+      a:hover{
+        color: #a8dadc;
+        transition: color 0.2s ease-in;
+      }
+
+
+      
+      input[type=submit]:hover{
+        cursor: pointer;
+      }
+
+      .error{
+        color:#e63946;
+        width: 100%;
+        margin-bottom: 10px;
+      }
+
+      .input-control.error .inputs:focus {
+        border: 1px solid #e63946;
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(255, 35, 15, 0.3); /* smooth, centered glow */
+      }
+
+      .input-control.error input{
+        border-color: #e63946;
+      }
+    </style>
+
+    
+    
+  </head>
+
+  <body>
+
+    <div class="center">
+
+      <div class="left">
+        
+
+        <h1>Welcome back!</h1>
+        <p>enter your credentials to see your notes and saves.</p>
+
+        
+
+        <form id="form" class="signup-form">
+          <div class="input-control">
+            <label for="email" id="email-label"> Email</label>
+            <input type="text" id="email" class="inputs" placeholder="Enter your email. ex: email1@gmail.com">
+            <div class="error"></div>
+        </div>
+
+        <div class="input-control">
+          <label for="password"> Password</label>
+          <input type="password" id="password" class="inputs" placeholder="********" >
+          <div class="error"></div>
+        </div>
+
+          <div class="forgot-password">
+            <a href="#">forgot your password?</a>
+          </div>
+          
+          <input type="submit" value="signin">
+        </form>
+
+        <p> already have an account? <a href="signup.html">signup</a></p> 
+
+        <br> <p>or continue with</p> <br>
+
+
+  
+      </div>
+      <div class="right">
+      </div>
+  
+
+
+    </div>
+   
+    
+  </body>
+
+</html>
